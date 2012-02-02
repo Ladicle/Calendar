@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<filter>
+		<filter-name>Filter</filter-name>
+		<filter-class>secret.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter</filter-name>
+		<url-pattern>/cd/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>Schedule</servlet-name>
+		<servlet-class>schedule.ScheduleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Plan</servlet-name>
+		<servlet-class>schedule.Plan</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Form</servlet-name>
+		<servlet-class>schedule.Form</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Entry</servlet-name>
+		<servlet-class>user.Entry</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>secret.Login</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>secret.Logout</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>error</servlet-name>
+		<jsp-file>/jsp/error.jsp</jsp-file>
+	</servlet>
+	<servlet>
+	<servlet-name>success</servlet-name>
+		<jsp-file>/jsp/success.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>regist</servlet-name>
+		<jsp-file>/jsp/regist.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Plan</servlet-name>
+		<url-pattern>/cd/Plan</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Schedule</servlet-name>
+		<url-pattern>/cd/calendar</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Form</servlet-name>
+		<url-pattern>/cd/form</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Entry</servlet-name>
+		<url-pattern>/Entry</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>error</servlet-name>
+		<url-pattern>/error</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>success</servlet-name>
+		<url-pattern>/success</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>regist</servlet-name>
+		<url-pattern>/regist</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+</web-app>
